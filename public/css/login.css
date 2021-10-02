@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+
+
+}
+
+body{
+    background-color: 	#DCDCDC;
+    overflow: hidden;
+}
+#form{
+    
+    background-color:#ffffff;
+    border-radius: 15px;
+   
+    padding: 0 20px;
+
+    box-shadow:  2px 2px 15px rgb(161, 161, 161);
+
+}
+
+
+
+
+.google img{
+    width: 200px;
+
+}
+.google {
+    
+    list-style: none;
+    margin-bottom: 20px;
+
+}
