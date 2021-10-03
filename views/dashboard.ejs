@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashnode</title>
+    <link rel="stylesheet" type="text/css" href="/css/dashboard.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/330f675b37.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="/image/brand-full.png" height="24" width="100" class="d-inline-block align-text-top">
+                      </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" ><i class="far fa-user"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </div>
+<div class="row">
+    <div class="col-2">
+        <div class="card">
+              <h5 class="card-title text-center"><img src="/image/brand-full.png" height="30" width="150" class="d-inline-block align-text-top" id="img-1"></h5>
+              <button type="button" class="btn btn-primary mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal" id="btn-write" ><i class="fas fa-pencil-alt"></i>&nbsp; WRITE</button>
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+              <div class="modal-content">
+              <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Share your Post</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+              <form>
+              <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Title</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter your title here">
+              </div>
+              <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Tell your story</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+              </div>
+              <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Insert Picture here &nbsp;<i class="fas fa-image"></i></label>
+              <input type="file" class="form-control" id="exampleFormControlFile1">
+              </div>
+              </form>
+              </div>
+              <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Post</button>
+              </div>
+              </div>
+              </div>
+              </div><br>
+              <ul class="list-group list-group-flush" id="list-1">
+                <li class="list-group-item">
+                  <p id="link-btn" ><a href="#" ><i class="fas fa-scroll "></i>  My Feed</a></p>
+                  <p id="link-btn" ><a href="#"><i class="fas fa-book"></i>  Draft</a></p>
+                </li>
+                <li class="list-group-item">
+                  <p id="link-btn"><a href="#"><i class="fas fa-compass"></i>  Explore</a></p>
+                  <p id="link-btn"><a href="#"><i class="fas fa-tag"></i>  Tags</a></p>
+                  <p id="link-btn"><a href="#"><i class="far fa-bookmark"></i>  Bookmarks</a></p>
+                  <p id="link-btn"><a href="#"><i class="fas fa-search"></i>  Search</a></p>
+                  <p id="link-btn"><a href="#"><i class="fas fa-chevron-down"></i>  More</a></p>
+                <li class="list-group-item">
+                  <p class="notify"><i class="far fa-bell fa-3x"></i></p>
+                  <p class="notify"><i class="fas fa-user-circle fa-3x"></i></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+  <div class="col-7">
+    <div class="card">
+            <div class="row">
+              
+                <div class="card-body">
+                  <h3 class="card-title"><a href="#" style="text-decoration: none; color: black;"><i class="fas fa-user-circle"></i> Karthick Raja N</a><button class="btn btn-secondary" style="float: right;"><i class="fas fa-tag"></i>  My Tags</button></h3><br>
+                  <div class="d-grid gap-2"><button class="btn btn-outline-dark" id="lar-btn"><i class="fas fa-pencil-alt fa-2x">&nbsp;Write an article</i></button></div>
+                </div>
+              </div>
+            </div><br>
+            <div class="card">
+            <div class="row">
+                    <div class="col-5">
+                      <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1613028498073/v0zA0b2ci.png?auto=compress" class="img-fluid" alt="Send">
+                    </div>
+                    <div class="col-7">
+                      <h3>Thousands of developers publish informative and useful dev articles on Hashnode every week.</h3>
+                      <h6>Staying up-to-date with the best ones can be difficult.</h6>
+                      <br>
+                      <h6>Introducing a personalized newsletter 💌 of the best articles from the tags you follow.</h6>
+                      <button class="btn btn-success">Sign me up 🚀</button>
+                    </div>
+                  </div>
+            </div>
+            </div>
+       </div>
+    </div>
+</div>
+</body>
+</html>
