@@ -52,9 +52,9 @@ app.get("/register",(req,res)=>{
        res.render("register");
 })
 
-// app.get("/",(req,res)=>{
-       
-// })
+app.get("/profile",(req,res)=>{
+       res.render("profile");
+})
 
 app.listen(port,()=>{
     console.log("Server connected on: " + port)
