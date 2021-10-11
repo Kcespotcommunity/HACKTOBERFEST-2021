@@ -13,9 +13,8 @@ var express         = require('express'),
 
     var port = process.env.PORT || 7700;
 
- mongoose.connect("<%MONGOURI%>",{
+ mongoose.connect("mongodb+srv://hacktoberfest:hacktoberfest@hacktoberfest.2tevb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",{
   useNewUrlParser :true,
-  useCreateIndex  :true,
   useUnifiedTopology: true
 }).then(() =>{
   console.log("mongodb connected");
@@ -30,7 +29,8 @@ app.use(require("express-session")({
    }));
 
 
-const User = require("./models/user")
+const User = require("./models/user");
+const Post = require("./models/post");
    
 
 app.use(passport.initialize());
@@ -55,6 +55,42 @@ app.get("/register",(req,res)=>{
 app.get("/profile",(req,res)=>{
        res.render("profile");
 })
+
+app.get("/dashboard",(req,res)=>{
+    res.render("dashboard");
+})
+
+
+//POST Method routes
+
+  app.post("/newpost",(req,res)=>{
+    const data = req.body;
+    Post.create(data,(err)=>{
+      if(err){
+        console.log(err)
+      }else{
+        res.redirect("/");
+      }
+    })
+  })
+
+
+  app.post("/register",(req,res)=>{
+    const data = req.body;
+    User.create(data,(err)=>{
+      if(err){
+        console.log(err)
+      }else{
+        res.redirect("/dashboard");
+      }
+    })
+  })
+
+  app.post("login",(req,res)=>{
+    
+  })
+
+
 
 app.listen(port,()=>{
     console.log("Server connected on: " + port)
