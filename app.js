@@ -4,12 +4,14 @@ var express         = require('express'),
     bodyParser      = require('body-parser'),
     passport        = require('passport'),
     methodOverride  = require('method-override'),
+    flash           = require('connect-flash');
     LocalStrategy   = require("passport-local");
 
     app.set("view engine","ejs");
     app.use(bodyParser.urlencoded({extended:true}));
     app.use(express.static("public"));
-    app.use(methodOverride("_method"));    
+    app.use(methodOverride("_method")); 
+    app.use(flash());   
 
     var port = process.env.PORT || 7700;
 
@@ -75,20 +77,40 @@ app.get("/dashboard",(req,res)=>{
   })
 
 
-  app.post("/register",(req,res)=>{
-    const data = req.body;
-    User.create(data,(err)=>{
-      if(err){
-        console.log(err)
-      }else{
-        res.redirect("/dashboard");
-      }
-    })
-  })
+ //! Registration Side
+ app.post("/register",function(req,res){
+  var newobj = {
+    username        : req.body.username
+    };
+  User.register(newobj , req.body.password,function(err){
+          if(err){
+            req.flash("error", err.message);
+            res.redirect("/register");
+          }
+            passport.authenticate("local")(req,res,function(){
+            res.redirect("/profile");
+          });
+      }); 
+  });
 
-  app.post("login",(req,res)=>{
-    
-  })
+  //!  Login Side
+
+  app.post("/login",passport.authenticate("local",
+      {
+          successRedirect: "/profile",
+          failureRedirect: "/login",
+          failureFlash: true,
+      }) ,function(req,res){
+          req.flash("error","Phone Number or password is incorrect");
+          return res.redirect("/login");
+    });
+
+    //! Logout side
+
+    app.get("/logout",function(req,res){
+      req.logout();
+      res.redirect("/");
+    });
 
 
 
