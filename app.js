@@ -54,9 +54,65 @@ app.get("/register",(req,res)=>{
        res.render("register");
 })
 
-app.get("/dashboard",(req,res)=>{
-       res.render("dashboard")
+app.get("/profile",(req,res)=>{
+       res.render("profile");
 })
+
+app.get("/dashboard",(req,res)=>{
+    res.render("dashboard");
+})
+
+
+//POST Method routes
+
+  app.post("/newpost",(req,res)=>{
+    const data = req.body;
+    Post.create(data,(err)=>{
+      if(err){
+        console.log(err)
+      }else{
+        res.redirect("/");
+      }
+    })
+  })
+
+
+ //! Registration Side
+ app.post("/register",function(req,res){
+  var newobj = {
+    username        : req.body.username
+    };
+  User.register(newobj , req.body.password,function(err){
+          if(err){
+            req.flash("error", err.message);
+            res.redirect("/register");
+          }
+            passport.authenticate("local")(req,res,function(){
+            res.redirect("/profile");
+          });
+      }); 
+  });
+
+  //!  Login Side
+
+  app.post("/login",passport.authenticate("local",
+      {
+          successRedirect: "/profile",
+          failureRedirect: "/login",
+          failureFlash: true,
+      }) ,function(req,res){
+          req.flash("error","Phone Number or password is incorrect");
+          return res.redirect("/login");
+    });
+
+    //! Logout side
+
+    app.get("/logout",function(req,res){
+      req.logout();
+      res.redirect("/");
+    });
+
+
 
 app.listen(port,()=>{
     console.log("Server connected on: " + port)
