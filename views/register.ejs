@@ -15,29 +15,28 @@
         
        <div class="row mt-5 justify-content-center text-center">
          <div class="col-11 col-sm-10 col-md-7 col-lg-4" id="form">
-          <img src="/image/logo.jpeg" class="img-fluid d-block mx-auto my-5" width="200">
+          <img src="/image/logo1.png" class="img-fluid d-block mx-auto my-5" width="200">
           <h5>Create an account</h5>
-          <p class="text-secondary"><small>Create account using a secure link</small></p>
+          <p class="text-secondary"><small>Secure link</small></p>
   
-          <form>
+          <form action="/register" method="POST" >
               <div class="mb-1">
                 <label for="exampleInputEmail1" class="form-label"></label>
-                <input type="email" class="form-control" placeholder="Enter your email address">
+                <input type="email" class="form-control" placeholder="Enter your email address" name="username" required>
                
               </div>
               <div class="mb-5">
                 <label for="exampleInputPassword1" class="form-label"></label>
-                <input type="password" class="form-control" placeholder="Enter your password">
+                <input type="password" class="form-control" placeholder="Enter your password" name="password" required>
               </div>
   
-              <button type="submit" class="btn btn-primary">Login To Account</button>
+              <button type="submit" class="btn btn-warning"><b>Create an Account</b></button>
               <p class="text-secondary mt-3">Or, connect with</p>
   
               <div class="google">
-                 <p> <a href="/login">Login</a></p>
+                 <p> <a href="/login" class="text-warning">Login</a></p>
               </div>
           
-             
             </form>
          </div>
        </div>
