@@ -1,3 +1,7 @@
+body::-webkit-scrollbar{
+    display: none;
+}
+
 #btn-write{
     font-weight: bold;
     font-size:large;
@@ -43,35 +47,5 @@ background-color:antiquewhite;
     color: black;
     
 }
-form.example input[type=text] {
-    padding: 10px;
-    font-size: 17px;
-    
-    border-radius: 5px;
-    float: left;
-    
-    background: #f1f1f1;
-  }
-  
-  form.example button {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: #2196F3;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-radius: 5px;
-    border-left: none;
-    cursor: pointer;
-  }
-  
-  form.example button:hover {
-    background: #0b7dda;
-  }
-  
-  form.example::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+
+
