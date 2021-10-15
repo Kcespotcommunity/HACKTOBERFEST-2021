@@ -59,7 +59,13 @@ app.get("/profile",(req,res)=>{
 })
 
 app.get("/dashboard",(req,res)=>{
-    res.render("dashboard");
+  Post.find({},(err,data)=>{
+    if(err){
+      console.log(err)
+    }else{
+      res.render("dashboard",{post : data});
+    }
+  })
 })
 
 

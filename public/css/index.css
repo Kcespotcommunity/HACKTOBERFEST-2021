@@ -7,5 +7,13 @@
     margin-bottom: 5px;
   }
   .nav-link{
-    color:black;
+    color:rgb(255, 255, 255);
+  }
+
+  .nav-link:hover{
+    color: rgb(255, 225, 0);
+  }
+
+  .btn:focus{
+    box-shadow: none;
   }
