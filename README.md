@@ -12,6 +12,10 @@ git clone <url> (given in clone or download button)
 ```markdown
 git checkout -b branch-name
 ```
+* Add the KCEspot main branch remote link to pull changes made by others
+```markdown
+git remote add kcespot https://github.com/Kcespotcommunity/hacktoberfest.git
+```
 * Make your changes (Choose from any task below)
 * Commit and Push
 ```markdown
@@ -21,9 +25,7 @@ git push origin branch-name
 ```
 * To pull from KCEspot main branch to your branch
 * First commit your work and push your finished work in your branch
-* Add the KCEspot main bracnh remote link and then pull
 ```markdown
-git remote add kcespot https://github.com/Kcespotcommunity/hacktoberfest.git
 git pull kcespot main
 ```
 * Create a New Pull Request from your forked repository (Click the New Pull Request button located at the top of your repo)
