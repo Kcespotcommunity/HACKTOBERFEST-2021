@@ -8,6 +8,11 @@ How to Contribute.
 ```markdown
 git clone <url> (given in clone or download button)
 ```
+* To Run the application
+```markdown
+npm install
+node app (or) nodemon
+```
 * Create a branch
 ```markdown
 git checkout -b branch-name
