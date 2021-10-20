@@ -37,15 +37,22 @@ body::-webkit-scrollbar{
 background-color:antiquewhite;
 }
 #lar-btn{
-    text-align: left; 
-    padding: 17px;
+    text-align: center; 
+    padding: 12px;
     border: 2px darkgray;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
 }
 #lar-btn:hover{
-    background-color: darkgray;
-    color: black;
-    
+    background-color: gray;
 }
-
-
+.d-flex{
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 5px;
+    padding: 10px;
+}
+#footer{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
