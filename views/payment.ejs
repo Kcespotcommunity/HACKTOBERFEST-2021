@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" id="name" class="form-control " required style="width: 200px;">
+        <button onclick="getotp()" class="btn-primary">Get OTP</button>
+        <p id="display"></p>
+        <div id="otpdiv" style="visibility: hidden;">
+            <input type="text" id="otp" class="form-control" required style="width: 200px;" placeholder="enter OTP">
+            <button onclick="checkotp()" class="btn-primary">Check OTP</button>
+            <p id="displaycrtotp"></p>
+        </div>
+
+    </div>
+
+
+
+    <script>
+        var otp ;
+        
+        function getotp() {
+            var name = document.getElementById("name").value;
+            otp = Math.floor((Math.random() * 9999) + 1001);
+            if (!name.match(/^[0-9]+$/)) {
+                alert("enter only number");
+            }
+            else {
+                if (name.length != 10) {
+                    alert("number should be in length 10");
+                }
+                else {
+                    document.getElementById("display").innerHTML = "your OTP" + " " + otp;
+                   let divotp = document.getElementById("otpdiv");
+                   divotp.style.visibility = "visible";
+                }
+            }
+        }
+
+        function checkotp() {
+            var val = document.getElementById("otp").value;
+            if (val == otp) {
+                document.getElementById("displaycrtotp").innerHTML = "you entered correct otp";
+            }
+            else {
+                document.getElementById("displaycrtotp").innerHTML = "you entered wrong otp";
+            }
+        }
+    </script>
+</body>
+
+</html>
