@@ -58,6 +58,10 @@ app.get("/profile",(req,res)=>{
        res.render("profile");
 })
 
+app.get("/donate",(req,res)=>{
+  res.render("donate");
+})
+
 app.get("/dashboard",(req,res)=>{
   Post.find({},(err,data)=>{
     if(err){
