@@ -58,8 +58,12 @@ app.get("/profile",(req,res)=>{
        res.render("profile");
 })
 
-app.get("/donate",(req,res)=>{
-  res.render("donate");
+app.get("/terms",(req,res)=>{
+  res.render("terms");
+})
+
+app.get("/privacy",(req,res)=>{
+  res.render("privacy");
 })
 
 app.get("/dashboard",(req,res)=>{
