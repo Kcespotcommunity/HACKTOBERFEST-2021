@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.term h2{
+    margin-left: 10%;
+}
+
+P{
+    width: 70%;
+    margin-bottom: 20px;
+    margin-left: 10%;
+}
